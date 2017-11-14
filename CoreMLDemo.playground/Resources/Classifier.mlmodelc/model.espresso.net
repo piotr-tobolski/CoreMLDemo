@@ -1,0 +1,70 @@
+{
+  "storage" : "model.espresso.weights",
+  "properties" : {
+
+  },
+  "format_version" : 200,
+  "layers" : [
+    {
+      "nB" : 11,
+      "top" : "dense_277__activation___output",
+      "has_biases" : 1,
+      "weights" : {
+
+      },
+      "nC" : 6,
+      "blob_weights" : 3,
+      "type" : "inner_product",
+      "has_relu" : 1,
+      "bottom" : "input1",
+      "blob_biases" : 1,
+      "has_tanh" : 0,
+      "name" : "dense_277",
+      "has_prelu" : 0
+    },
+    {
+      "nB" : 6,
+      "top" : "dense_278__activation___output",
+      "has_biases" : 1,
+      "weights" : {
+
+      },
+      "nC" : 6,
+      "blob_weights" : 7,
+      "type" : "inner_product",
+      "has_relu" : 1,
+      "bottom" : "dense_277__activation___output",
+      "blob_biases" : 5,
+      "has_tanh" : 0,
+      "name" : "dense_278",
+      "has_prelu" : 0
+    },
+    {
+      "nB" : 6,
+      "top" : "dense_279_output",
+      "has_biases" : 1,
+      "weights" : {
+
+      },
+      "nC" : 1,
+      "blob_weights" : 11,
+      "type" : "inner_product",
+      "has_relu" : 0,
+      "bottom" : "dense_278__activation___output",
+      "blob_biases" : 9,
+      "has_tanh" : 0,
+      "name" : "dense_279",
+      "has_prelu" : 0
+    },
+    {
+      "mode" : 3,
+      "weights" : {
+
+      },
+      "top" : "output1",
+      "type" : "activation",
+      "name" : "dense_279__activation__",
+      "bottom" : "dense_279_output"
+    }
+  ]
+}
